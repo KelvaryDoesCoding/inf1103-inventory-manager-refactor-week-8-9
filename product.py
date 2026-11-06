@@ -1,9 +1,10 @@
 # A product manages its own information and stock 
 
 import math
+from abc import ABC, abstractmethod
 
 
-class Product:
+class Product(ABC):
     def __init__(self, product_id: str, name: str, price: float, stock: int):
         if not isinstance(product_id, str) or not product_id.strip():
             raise ValueError("Product ID cannot be empty.")
@@ -43,3 +44,7 @@ class Product:
     def display_information(self) -> None:
         print(f"{self.__product_id:<12} {self.__name:<25} "
               f"${self.__price:>10.2f} {self.__stock:>8}")
+
+    @abstractmethod
+    def get_fulfilment_info(self) -> str:
+        pass

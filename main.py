@@ -3,7 +3,8 @@
 from pathlib import Path
 
 from file_handling import load_inventory, save_inventory
-from product import Product
+from physical_product import PhysicalProduct
+from digital_product import DigitalProduct
 
 
 DATA_FILE = Path(__file__).resolve().with_name("inventory.json")
@@ -31,12 +32,21 @@ def main() -> None:
             if choice == "1":
                 inventory.display_all()
             elif choice == "2":
+                product_type = input("Product type (1 = physical, 2 = digital): ").strip()
+                if product_type not in ("1", "2"):
+                    raise ValueError("Choose 1 for physical or 2 for digital.")
                 product_id = inventory.generate_product_id()
                 print(f"Product ID: {product_id}")
                 name = input("Product name: ")
                 price = float(input("Price: "))
                 stock = int(input("Stock: "))
-                inventory.add_product(Product(product_id, name, price, stock))
+                if product_type == "1":
+                    weight = float(input("Weight (kg): "))
+                    product = PhysicalProduct(product_id, name, price, stock, weight)
+                else:
+                    download_size = float(input("Download size (MB): "))
+                    product = DigitalProduct(product_id, name, price, stock, download_size)
+                inventory.add_product(product)
                 print("Product added successfully!")
             elif choice == "3":
                 product_id = input("Product ID: ")

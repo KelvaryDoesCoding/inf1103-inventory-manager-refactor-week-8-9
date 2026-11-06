@@ -3,36 +3,88 @@
         "id": "P001",
         "name": "Laptop",
         "price": 1200.0,
-        "stock": 15
+        "stock": 15,
+        "type": "physical",
+        "weight": 0.0
     },
     {
         "id": "P002",
         "name": "Mouse",
         "price": 25.5,
-        "stock": 40
+        "stock": 40,
+        "type": "physical",
+        "weight": 0.0
     },
     {
         "id": "P003",
         "name": "Shampoo",
         "price": 5.75,
-        "stock": 32
+        "stock": 32,
+        "type": "physical",
+        "weight": 0.0
     },
     {
         "id": "P004",
         "name": "Battery",
         "price": 3.45,
-        "stock": 12
+        "stock": 12,
+        "type": "physical",
+        "weight": 0.0
     },
     {
         "id": "P005",
         "name": "Flashlight",
         "price": 15.0,
-        "stock": 45
+        "stock": 45,
+        "type": "physical",
+        "weight": 0.0
     },
     {
         "id": "P006",
         "name": "MSP430",
         "price": 100.67,
-        "stock": 45
+        "stock": 45,
+        "type": "physical",
+        "weight": 0.0
+    },
+    {
+        "id": "P007",
+        "name": "Bar of Soap",
+        "price": 2.34,
+        "stock": 23,
+        "type": "physical",
+        "weight": 0.0
+    },
+    {
+        "id": "P008",
+        "name": "Raspberry Pi",
+        "price": 100.78,
+        "stock": 34,
+        "type": "physical",
+        "weight": 0.0
+    },
+    {
+        "id": "P009",
+        "name": "Valorant",
+        "price": 34.5,
+        "stock": 12,
+        "type": "digital",
+        "download_size": 3200.0
+    },
+    {
+        "id": "P010",
+        "name": "Comb",
+        "price": 5.45,
+        "stock": 35,
+        "type": "physical",
+        "weight": 0.5
+    },
+    {
+        "id": "P011",
+        "name": "TinyCircuits",
+        "price": 50.0,
+        "stock": 37,
+        "type": "physical",
+        "weight": 1.0
     }
 ]
